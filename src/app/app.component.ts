@@ -8,6 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng190716';
   keyword = '';
+  data: any = {};
+
+  ngOnInit(): void {
+    fetch('/api/articles.json')
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      this.data = data;
+    });
+  }
 
   doSearch(str) {
     this.keyword = str;
