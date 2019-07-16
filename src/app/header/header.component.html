@@ -27,7 +27,7 @@
       <div class="pull-left">
         <h1><a href="http://blog.miniasp.com/">{{ sitename }}</a></h1>
         <h3 [innerHTML]="subtitle" [class.highlight]="counter % 2 == 0"
-            [ngStyle]="{'font-size': 12 + counter + 'px'}"></h3>
+            [style.font-size.px]="12 + counter"></h3>
       </div>
       <div id="social-icons" class="pull-right social-icon">
         <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
