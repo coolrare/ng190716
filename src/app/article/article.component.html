@@ -1,11 +1,11 @@
 <article class="post" id="post{{i+1}}">
   <header class="post-header">
     <h2 class="post-title">
-      <a [href]="item.href">{{item.title}}</a>
+      <a [href]="item.href">{{item.title|uppercase}} NT${{12345|number}}</a>
     </h2>
     <div class="post-info clearfix">
       <span class="post-date"><i class="glyphicon glyphicon-calendar"></i>
-        {{item.data}}
+        {{item.date|date:"yyyy-MM-dd"}}
       </span>
       <span class="post-author"><i class="glyphicon glyphicon-user"></i><a
            href="http://blog.miniasp.com/author/will.aspx">{{item.author}}</a></span>
