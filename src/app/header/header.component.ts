@@ -16,9 +16,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeTitle($event: MouseEvent) {
-    console.log($event);
-    if ($event.ctrlKey) {
+  changeTitle(isCtrlClicked: boolean) {
+    if (isCtrlClicked) {
       this.sitename += '!';
     }
   }
