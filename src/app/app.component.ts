@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,12 @@ export class AppComponent implements OnInit {
   keyword = '';
   data: any = [];
 
+  constructor(private datasvc: DataService) {
+
+  }
+
   ngOnInit(): void {
-    fetch('/api/articles.json')
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
+    this.datasvc.loadData().subscribe((data) => {
       this.data = data;
     });
   }
