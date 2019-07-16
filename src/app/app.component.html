@@ -11,7 +11,8 @@
         <!-- Article START-->
         <app-article *ngFor="let item of data; let i = index"
           [i]="i"
-          [item]="item"></app-article>
+          [item]="item"
+          (delete)="doDelete($event)"></app-article>
         <!-- Article END-->
       </div>
     </section>
